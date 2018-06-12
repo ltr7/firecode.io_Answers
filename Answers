@@ -1,0 +1,35 @@
+//Binary Search On Array of Integers
+
+// java.util.* and java.util.streams.* have been imported for this problem.
+// You don't need any other imports.
+
+public static Boolean binarySearch(int[] arr, int n){
+    int low = 0;
+    int high = arr.length-1;
+    int mid = 0;
+    
+    if (arr.length < 1) {
+        return false;
+    }
+    
+    while (high - low <= 0){
+        
+    mid = high/2;
+    
+    if (n == arr[mid]) {
+    return true;
+    }
+    
+    else if (n > arr[mid]) {
+        low = mid-1;
+    }
+    
+    else {
+        high = mid+1;
+    }
+    }
+    
+return false;
+
+
+}
